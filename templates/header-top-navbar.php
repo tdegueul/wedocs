@@ -21,27 +21,6 @@
 </header>
 
 <div class="container">
-	<div class="top-search-form">
-	    <div class="row">
-	        <div class="col-sm-10 col-sm-offset-2">
-				<form role="search" method="get" class="search-form form-inline" action="<?php echo home_url('/'); ?>">
-				    <div class="form-group col-md-5">
-				        <input type="search" value="<?php if (is_search()) { echo get_search_query(); } ?>" name="s" class="search-field form-control" placeholder="<?php _e('Search', 'wedocs'); ?> <?php bloginfo('name'); ?>">
-				        <label class="hide"><?php _e('Search for:', 'wedocs'); ?></label>
-				    </div>
-
-				    <div class="form-group col-md-3">
-				    	<?php wp_dropdown_categories( array( 'show_option_all' => __( 'All Documents', 'wedocs' ), 'hide_empty' => false, 'hierarchical' => true, 'class' => 'form-control', 'id' => 'wedevs-category' ) ); ?>
-				    </div>
-
-				    <div class="form-group col-md-2">
-				    	<button type="submit" class="search-submit btn btn-primary"><?php _e('Search', 'wedocs'); ?></button>
-				    </div>
-				</form>
-	        </div>
-	    </div>
-	</div> <!-- .top-search-form -->
-
 	<div class="row">
 		<div class="col-md-12">
 			<?php wedocs_breadcrumbs(); ?>
